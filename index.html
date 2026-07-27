@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Legal — TCG Tools</title>
+<style>
+  :root{
+    --bg:#0d0f12;
+    --surface:#161a20;
+    --text:#e9edf2;
+    --muted:#a7b0bb;
+    --accent:#e5b567;
+    --rule:#262c34;
+    --link:#7cb0ff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:56px 22px 80px;
+  }
+  header{
+    border-bottom:1px solid var(--rule);
+    padding-bottom:24px;
+    margin-bottom:12px;
+  }
+  h1{
+    font-size:1.9rem;
+    margin:0 0 6px;
+    letter-spacing:.2px;
+  }
+  .brand{
+    color:var(--accent);
+    font-weight:600;
+    font-size:.95rem;
+    letter-spacing:.4px;
+    text-transform:uppercase;
+  }
+  .intro{
+    color:var(--muted);
+    margin:18px 0 8px;
+  }
+  a.doclink{
+    display:block;
+    background:var(--surface);
+    border:1px solid var(--rule);
+    border-left:3px solid var(--accent);
+    border-radius:10px;
+    padding:20px 22px;
+    margin:16px 0;
+    text-decoration:none;
+    color:var(--text);
+    transition:border-color .15s ease, transform .05s ease;
+  }
+  a.doclink:hover{
+    border-left-color:var(--link);
+    transform:translateY(-1px);
+  }
+  .doclink .title{
+    font-size:1.15rem;
+    font-weight:600;
+    margin:0 0 4px;
+  }
+  .doclink .desc{
+    color:var(--muted);
+    font-size:.92rem;
+    margin:0;
+  }
+  footer{
+    margin-top:48px;
+    padding-top:20px;
+    border-top:1px solid var(--rule);
+    color:var(--muted);
+    font-size:.85rem;
+  }
+  footer a{color:var(--link);text-decoration:none;}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">TCG Tools — Polar Bear Studios</div>
+      <h1>Legal &amp; Policies</h1>
+    </header>
+
+    <p class="intro">
+      The documents below govern your use of TCG Tools and explain how your
+      data is handled. Tap any item to read it in full.
+    </p>
+
+    <a class="doclink" href="privacy.html">
+      <p class="title">Privacy Policy</p>
+      <p class="desc">What information we collect, how it's used, and your choices.</p>
+    </a>
+
+    <a class="doclink" href="terms.html">
+      <p class="title">Terms of Service</p>
+      <p class="desc">The rules for using the app, subscriptions, and billing.</p>
+    </a>
+
+    <a class="doclink" href="delete-account.html">
+      <p class="title">Account &amp; Data Deletion</p>
+      <p class="desc">How to delete your account and what happens to your data.</p>
+    </a>
+
+    <footer>
+      © 2026 Polar Bear Studios · TCG Tools · Jurisdiction: Mexico ·
+      <a href="mailto:tcgtoolsofficial@gmail.com">tcgtoolsofficial@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
