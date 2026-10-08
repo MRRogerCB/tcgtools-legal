@@ -1,52 +1,39 @@
-# tcgtools-legal
+# tcgtools-legal — OBSOLETE (moved 8 Oct 2026)
 
-Public legal pages for the **TCG Tools** app (Polar Bear Studios), hosted via
-GitHub Pages.
+> **This repository is no longer used.** Do not edit the policies here.
+> Every page now redirects to its new home on **tcgtools.app**.
 
-## Live URLs
+## Where the legal pages live now
 
-The site is served from GitHub Pages at:
-
-- **Landing / index:** https://mrrogercb.github.io/tcgtools-legal/
-- **Privacy Policy:** https://mrrogercb.github.io/tcgtools-legal/privacy.html
-- **Terms of Service:** https://mrrogercb.github.io/tcgtools-legal/terms.html
-- **Account & Data Deletion:** https://mrrogercb.github.io/tcgtools-legal/delete-account.html
-
-> The base URL pattern is `https://<username>.github.io/<repo-name>/<file>`.
-> Here that's `mrrogercb` + `tcgtools-legal` + the page filename.
-
-## Files
-
-| File | Purpose |
+| Document | Current URL |
 |---|---|
-| `index.html` | Landing page linking all three documents (main entry point). |
-| `privacy.html` | Privacy Policy. |
-| `terms.html` | Terms of Service. |
-| `delete-account.html` | Account & data deletion instructions (Play-required URL). |
+| Privacy Policy | https://tcgtools.app/privacy |
+| Terms of Service | https://tcgtools.app/terms |
+| Account & Data Deletion | https://tcgtools.app/delete-account |
 
-## Where these are used
+Use these URLs everywhere: Google Play Console (App content → Privacy
+policy), App Store Connect (Privacy Policy URL), emails and support replies.
 
-- **In the app:** the in-app legal screens (`lib/features/legal/legal_screens.dart`)
-  mirror this text. **The app's Dart text and these hosted pages must stay in
-  sync** — treat them as one source of truth kept in two places.
-- **Google Play Console:**
-  - App content → Privacy policy → point at `privacy.html`.
-  - App content → Data deletion → point at `delete-account.html`.
+## How the pages are made and published
 
-## Updating
+1. **Source of truth:** `lib/features/legal/legal_screens.dart` in the TCG Tools
+   app repository (the same text the app shows in its own Legal screens).
+2. **Generate:** run `py tools/build_legal_html.py` in the app repo. It writes
+   `docs/html legal files/privacy.html`, `terms.html` and `delete-account.html`.
+3. **Publish:** copy those files into the website repository (the site at
+   tcgtools.app, under `/legal/`). Never hand-edit them there.
 
-1. Edit the relevant `.html` file(s).
-2. Bump the "Effective date" / "Last updated" line in each edited file, and keep
-   all three dates consistent when a change spans multiple docs.
-3. Mirror any privacy/terms wording change into `legal_screens.dart` in the app.
-4. Commit + push — GitHub Pages redeploys automatically within a minute or two.
+## What this repo still does
 
-## Notes
+Only keeps old links working: `privacy.html`, `terms.html` and
+`delete-account.html` here forward visitors (and search engines, via
+`canonical` + `noindex`) to the URLs above. The old policy text remains in
+this repository's git history.
 
-- Trademark/fan-content disclaimer appears at the bottom of privacy + terms.
-  It's currently Pokémon-only; **each new TCG the app supports needs its own
-  disclaimer added here and in the app** in the same release the game ships.
-- These pages describe what the app does **today**. Planned features (e.g.
-  cloud sync of decks) should not be described as if already live.
+Old URLs (now redirects):
+- https://mrrogercb.github.io/tcgtools-legal/privacy.html
+- https://mrrogercb.github.io/tcgtools-legal/terms.html
+- https://mrrogercb.github.io/tcgtools-legal/delete-account.html
 
-© 2026 Polar Bear Studios · TCG Tools · Jurisdiction: Mexico
+Once nothing links here any more, this repository can be archived on GitHub
+(Settings → Danger Zone → Archive), which makes it read-only.
